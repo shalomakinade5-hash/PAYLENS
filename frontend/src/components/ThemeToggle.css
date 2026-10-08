@@ -1,0 +1,2 @@
+.theme-toggle { display: grid; width: 34px; height: 34px; flex: 0 0 auto; place-items: center; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 5px; background: var(--surface); cursor: pointer; transition: color .16s ease, border-color .16s ease, background .16s ease; }
+.theme-toggle:hover { color: var(--primary); border-color: var(--primary); background: var(--surface-elevated); }

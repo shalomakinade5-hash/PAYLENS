@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --background: #080e1a;
+  --surface: #0e1725;
+  --surface-elevated: #152235;
+  --border: #28384e;
+  --text-primary: #f4f7fc;
+  --text-secondary: #9baac0;
+  --text-tertiary: #73839b;
+  --primary: #3989f5;
+  --primary-hover: #5ba1ff;
+  --primary-soft: #132b4a;
+  --secondary: #72c8ff;
+  --success: #4ac894;
+  --warning: #e7b44d;
+  --error: #ef747a;
+  --canvas: var(--background);
+  --surface-raised: var(--surface-elevated);
+  --stroke: var(--border);
+  --text: var(--text-primary);
+  --muted: var(--text-secondary);
+  --subtle: var(--text-tertiary);
+  --lime: var(--primary);
+  --coral: var(--error);
+  --amber: var(--warning);
+  --mint: var(--success);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --background: #f4f7fb;
+  --surface: #ffffff;
+  --surface-elevated: #edf3fa;
+  --border: #d5dfeb;
+  --text-primary: #0e1d32;
+  --text-secondary: #506178;
+  --text-tertiary: #708097;
+  --primary: #1267cf;
+  --primary-hover: #0a55b5;
+  --primary-soft: #e6f0fc;
+  --secondary: #087dbb;
+  --success: #167b54;
+  --warning: #93600c;
+  --error: #b6444b;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+body { min-width: 320px; min-height: 100vh; margin: 0; color: var(--text-primary); background: var(--background); transition: color .18s ease, background-color .18s ease; }
+button, a { font: inherit; }
+button { color: inherit; font-weight: 600; }
+label { font-weight: 500; }
+button:disabled { cursor: default; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+::selection { background: var(--primary); color: #fff; }
+#root { min-height: 100vh; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
